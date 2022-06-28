@@ -1,6 +1,7 @@
 package v1
 
 import (
+	"fmt"
 	"reflect"
 	"testing"
 )
@@ -18,4 +19,19 @@ func TestPerimeter(t *testing.T) {
 		want := 40.0
 		assert(t, got, want)
 	})
+
+	t.Run("area", func(t *testing.T) {
+		got := Area(10.0, 10.0)
+		want := 100.0
+		assert(t, got, want)
+	})
+}
+
+func ExampleArea() {
+
+	area := Area(10.0, 10.0)
+
+	fmt.Println(area)
+
+	//Output 100
 }
